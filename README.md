@@ -1,5 +1,7 @@
 # Tic Tac Toe Game in React
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/012714b3-6837-4f5c-9548-1388ac3e7408/deploy-status)](https://app.netlify.com/sites/elegant-williams-f16297/deploys)
+
 ### Welcome to my Tic Tac Toe App using React!
 
 <br />
