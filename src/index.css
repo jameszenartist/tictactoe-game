@@ -1,13 +1,103 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #f00e2e;
+  text-decoration: none;
+  font-family: "VT323", monospace;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background: #0a0505;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#root {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.square {
+  width: 4rem;
+  height: 4rem;
+  background-color: #0a0505;
+  border: 3px solid #f00e2e;
+  float: left;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 2rem;
+  margin: -1px;
+  padding: 0;
+  text-align: center;
+  text-shadow: 0 0 15px #f00e2e;
+  box-shadow: "0 0 12px #f00e2e";
+  color: #f00e2e;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.game-info {
+  width: 225px;
+  text-align: center;
+  height: 100%;
+  text-shadow: 0 0 10px #ff14bd;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-info button {
+  width: 80%;
+  background-color: #0a0505;
+  padding: 0.25rem 0.5rem;
+  margin-top: 0.5rem;
+  color: #f00e2e;
+  font-size: 1.25rem;
+  border-radius: 5px;
+  border: 2px solid #f00e2e;
+  cursor: pointer;
+}
+
+.game-info button:hover {
+  box-shadow: 0 0 10px #f00e2e;
+  filter: brightness(150%);
+}
+
+.square:hover {
+  box-shadow: 0 0 15px #f00e2e;
+  filter: brightness(150%);
+}
+
+@media only screen and (max-width: 512px) {
+  #root {
+    width: 90%;
+    display: flex;
+  }
+
+  .board,
+  .game-info {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  #root {
+    flex-direction: column;
+  }
+
+  .board,
+  .game-info {
+    width: auto;
+  }
 }
