@@ -46,6 +46,7 @@ class Game extends React.Component {
   moveBackOne() {
     this.setState({
       stepNumber: this.state.stepNumber - 1,
+      xIsNext: !this.state.xIsNext,
     });
   }
 
@@ -55,8 +56,17 @@ class Game extends React.Component {
     const winner = CalculateWinner(current.squares);
 
     let status;
+
+    // if (winner) {
+    //   status = "Winner: " + winner;
+    // } else {
+    //   status = "Next player: " + (this.state.xIsNext ? "X" : "O");
+    // }
+
     if (winner) {
       status = "Winner: " + winner;
+    } else if (history.length === 9) {
+      status = "It's a tie!!";
     } else {
       status = "Next player: " + (this.state.xIsNext ? "X" : "O");
     }
